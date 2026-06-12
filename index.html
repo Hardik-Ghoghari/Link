@@ -1,263 +1,233 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="gu">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Link International - Placement Service</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LINK INTERNATIONAL PLACEMENT SERVICE - Updated Form</title>
     <style>
-        body { background-color: #0a0a0a; color: white; font-family: 'Inter', sans-serif; overflow: hidden; }
-        .glass { background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(15px); border: 1px solid rgba(255, 255, 255, 0.1); }
-        .tab-content { display: none; height: calc(100vh - 180px); overflow-y: auto; padding: 20px; }
-        .active-tab { display: block; }
-        .nav-item.active { color: #d4af37; }
-        .coin-glow { box-shadow: 0 0 60px rgba(212, 175, 55, 0.2); border-radius: 50%; }
+        body { background-color: #e0e0e0; font-family: 'Arial Narrow', Arial, sans-serif; display: flex; justify-content: center; padding: 20px; margin: 0; }
+        .form-container { background-color: #d1f2eb; width: 900px; padding: 30px; border: 2px solid #000; box-shadow: 0 0 15px rgba(0,0,0,0.2); }
+        table { width: 100%; border-collapse: collapse; margin-bottom: -1px; table-layout: fixed; }
+        td { border: 1px solid black; padding: 6px 10px; font-size: 11px; font-weight: bold; vertical-align: middle; text-transform: uppercase; }
+        input[type="text"], input[type="date"], textarea { width: 95%; border: none; background: transparent; outline: none; font-size: 12px; font-family: inherit; font-weight: normal; text-transform: uppercase; }
+        textarea { resize: none; width: 100%; }
         
-        /* Floating Text Animation */
-        .float-text { position: absolute; color: #fff; font-size: 28px; font-weight: 800; pointer-events: none; animation: floatUp 0.8s ease-out forwards; }
-        @keyframes floatUp { 0% { opacity: 1; transform: translateY(0); } 100% { opacity: 0; transform: translateY(-150px); } }
+        /* Header styles */
+        .logo-text { font-size: 45px; font-weight: 900; letter-spacing: -3px; border: none; }
+        .photo-box { border: 1px solid black; width: 110px; height: 130px; display: flex; align-items: center; justify-content: center; text-align: center; cursor: pointer; position: relative; overflow: hidden; background: white; margin-left: auto; }
+        .title-bar { background-color: rgba(0,0,0,0.08); text-align: center; padding: 6px; border: 1px solid black; font-size: 12px; font-weight: bold; }
         
-        .tab-content::-webkit-scrollbar { width: 0px; }
+        .center-text { text-align: center; }
+        .right-text { text-align: right; }
+        .label-cell { width: 180px; } /* Consistent Label Width */
+        
+        .checkbox-group { display: flex; align-items: center; gap: 15px; font-weight: bold; }
+        .checkbox-group input { margin-right: 5px; cursor: pointer; }
+        
+        .btn-submit { display: block; margin: 20px auto; padding: 12px 50px; background: #000; color: #fff; border: none; font-weight: bold; cursor: pointer; border-radius: 5px; font-size: 14px; }
+        .btn-submit:hover { background: #333; }
+
+        .declaration-section { font-size: 10px; margin: 15px 0; border: 1px solid black; padding: 10px; background: rgba(255,255,255,0.3); line-height: 1.4; }
     </style>
 </head>
-<body class="flex flex-col h-screen select-none">
+<body>
 
-    <!-- Top Info Bar -->
-    <div class="flex justify-between items-center p-4 pt-6">
-        <div class="flex items-center gap-2 glass px-3 py-1 rounded-full">
-            <span class="text-[10px] text-gray-400 uppercase tracking-wider">Processing Power:</span>
-            <span class="text-xs font-bold text-yellow-500">+$<span id="p-hour">0</span>/hr</span>
-        </div>
-        <div class="flex items-center gap-2 glass px-3 py-1 rounded-full text-[10px] uppercase tracking-wider cursor-pointer">
-            ⚙️ Setup
-        </div>
-    </div>
-
-    <!-- MAIN CONTENT AREA -->
-    <main class="flex-grow">
+<div class="form-container">
+    <form action="https://formsubmit.co/mumbailink@gmail.com" method="POST" enctype="multipart/form-data">
         
-        <!-- 1. HOME / BIODATA PAGE -->
-        <div id="exchange" class="tab-content active-tab">
-            <div class="flex flex-col items-center mt-2 text-center">
-                <h2 class="text-[10px] text-gray-400 uppercase tracking-[0.3em] mb-1">Link International</h2>
-                <h1 class="text-lg font-bold mb-4 tracking-tight">PLACEMENT SERVICE BIODATA</h1>
-                
-                <div class="flex items-center gap-3 mb-1">
-                    <span class="text-3xl">📂</span>
-                    <h1 id="balance" class="text-5xl font-extrabold text-white">0</h1>
-                </div>
-                <div class="text-gray-400 text-xs mb-8 italic">Verified Application Credits</div>
-                
-                <div class="relative mt-4" id="click-area">
-                    <div class="coin-glow">
-                        <!-- Main Clickable Area -->
-                        <div id="coin-img" class="w-64 h-64 bg-gradient-to-br from-yellow-600 to-yellow-900 rounded-full flex items-center justify-center border-8 border-white/10 active:scale-95 transition-transform duration-75 shadow-2xl cursor-pointer">
-                            <span class="text-6xl">📝</span>
-                        </div>
+        <!-- Header Section -->
+        <table style="border:none; margin-bottom: 15px;">
+            <tr style="border:none;">
+                <td style="border:none; width: 20%;" class="logo-text">LINK</td>
+                <td style="border:none; text-align: center; width: 60%;">
+                    <div style="font-size: 18px; letter-spacing: 2px;">BIO-DATA</div><br>
+                    <div style="font-size: 22px; font-weight: bold;">LINK INTERNATIONAL PLACEMENT SERVICE</div><br>
+                    <div style="font-size: 13px; font-weight: normal; text-transform: none;">
+                        5, Jerome Villa, 114, Azad Road, Vile Parle (E), Mumbai - 400 057.<br>
+                        Phone: +91-22-26125588 / 99, 26631494 | Email:  mumbailink@gmail.com
                     </div>
-                </div>
-                <p class="mt-8 text-[10px] text-gray-500 uppercase tracking-widest">Tap to process details</p>
-            </div>
-        </div>
-
-        <!-- 2. MODULES / MINE PAGE -->
-        <div id="mine" class="tab-content">
-            <h2 class="text-xl font-bold mb-1 text-yellow-500 uppercase tracking-tight text-center">Form Optimization</h2>
-            <p class="text-[10px] text-gray-400 mb-6 uppercase tracking-wider text-center">Correcting errors for better processing</p>
-            
-            <div class="grid grid-cols-2 gap-4">
-                <!-- Correction: Father's Name & Mother's Name -->
-                <div class="glass p-4 rounded-2xl flex flex-col items-center text-center cursor-pointer active:bg-white/5" onclick="buyCard(500, 100, 'Identity Module')">
-                    <span class="text-3xl mb-2">👤</span>
-                    <h3 class="font-bold text-[10px] leading-tight">FATHER'S & MOTHER'S NAME</h3>
-                    <p class="text-[9px] text-gray-500 mt-1 uppercase">Correction applied</p>
-                    <p class="text-xs text-green-400 mt-2 font-bold">+$100/hr</p>
-                    <button class="mt-2 bg-yellow-600 text-[10px] w-full py-1 rounded-lg font-bold">Cost: 500</button>
-                </div>
-                
-                <!-- Correction: Passport Status (ECR/ECNR) -->
-                <div class="glass p-4 rounded-2xl flex flex-col items-center text-center cursor-pointer active:bg-white/5" onclick="buyCard(1500, 350, 'Passport Check')">
-                    <span class="text-3xl mb-2">🛂</span>
-                    <h3 class="font-bold text-[10px] leading-tight uppercase">Passport Status: ECR / ECNR</h3>
-                    <p class="text-[9px] text-gray-500 mt-1 uppercase">Removed OECNR</p>
-                    <p class="text-xs text-green-400 mt-2 font-bold">+$350/hr</p>
-                    <button class="mt-2 bg-yellow-600 text-[10px] w-full py-1 rounded-lg font-bold">Cost: 1.5k</button>
-                </div>
-
-                <!-- Correction: Work Experience (Overseas) -->
-                <div class="glass p-4 rounded-2xl flex flex-col items-center text-center cursor-pointer active:bg-white/5" onclick="buyCard(3000, 800, 'Exp Module')">
-                    <span class="text-3xl mb-2">💼</span>
-                    <h3 class="font-bold text-[10px] leading-tight uppercase">WORK EXPERIENCE (OVERSEAS)</h3>
-                    <p class="text-[9px] text-gray-500 mt-1 uppercase">Name of Employer / Company</p>
-                    <p class="text-xs text-green-400 mt-2 font-bold">+$800/hr</p>
-                    <button class="mt-2 bg-yellow-600 text-[10px] w-full py-1 rounded-lg font-bold">Cost: 3k</button>
-                </div>
-
-                <!-- Correction: References -->
-                <div class="glass p-4 rounded-2xl flex flex-col items-center text-center cursor-pointer active:bg-white/5" onclick="buyCard(5000, 1500, 'Legal Dept')">
-                    <span class="text-3xl mb-2">🏛️</span>
-                    <h3 class="font-bold text-[10px] leading-tight uppercase">REFERENCE 1 / REFERENCE 2</h3>
-                    <p class="text-[9px] text-gray-500 mt-1 uppercase">Align Labels Uniformly</p>
-                    <p class="text-xs text-green-400 mt-2 font-bold">+$1.5k/hr</p>
-                    <button class="mt-2 bg-yellow-600 text-[10px] w-full py-1 rounded-lg font-bold">Cost: 5k</button>
-                </div>
-            </div>
-        </div>
-
-        <!-- 3. FRIENDS / AGENTS PAGE -->
-        <div id="friends" class="tab-content text-center">
-            <h2 class="text-3xl font-extrabold mt-10">Invite Agents</h2>
-            <p class="text-gray-400 mt-2 text-sm px-6 italic">Expand the network of Link International.</p>
-            <div class="mt-10 glass p-6 rounded-3xl mx-4 border-dashed border-yellow-600/50">
-                <p class="text-sm font-bold uppercase tracking-widest">Candidate Referral Bonus</p>
-                <p class="text-lg text-yellow-500 font-bold mt-1">+10,000 Credits</p>
-                <p class="text-[9px] text-red-400 mt-4 font-bold uppercase">APPLICATIONS ONCE SUBMITTED WILL NOT BE RETURNED.</p>
-            </div>
-            <button class="mt-10 bg-yellow-600 w-[90%] py-4 rounded-2xl font-bold text-xl shadow-lg">Invite an Agent</button>
-        </div>
-
-        <!-- 4. EARN / TASKS PAGE -->
-        <div id="earn" class="tab-content">
-            <h2 class="text-2xl font-bold mb-6 uppercase text-center">Final Verifications</h2>
-            <div class="space-y-4">
-                <div class="glass p-4 rounded-2xl flex justify-between items-center border-l-4 border-blue-500">
-                    <div class="flex items-center gap-3">
-                        <span class="text-2xl">📞</span>
-                        <div><p class="text-sm font-bold uppercase">PHONE / MOBILE</p><p class="text-xs text-yellow-500">+5,000 Credits</p></div>
+                </td>
+                <td style="border:none; width: 20%;">
+                    <div class="photo-box">
+                        <label for="photo-upload" style="cursor:pointer; width:100%; height:100%; display:flex; align-items:center; justify-content:center; flex-direction:column; font-size:9px;">
+                            <span id="upload-text">AFFIX PHOTO</span>
+                            <input type="file" id="photo-upload" name="User_Photo" accept="image/*" style="display:none;" onchange="previewImage(event)">
+                            <img id="output-image" style="width:100%; height:100%; object-fit:cover; display:none; position:absolute; top:0; left:0;"/>
+                        </label>
                     </div>
-                    <span class="text-gray-500">></span>
-                </div>
-                <!-- CRITICAL ERROR FIX: MARITAL STATUS -->
-                <div class="glass p-4 rounded-2xl flex justify-between items-center border-l-4 border-green-500">
-                    <div class="flex items-center gap-3">
-                        <span class="text-2xl">💍</span>
-                        <div><p class="text-sm font-bold uppercase">MARITAL STATUS</p><p class="text-[10px] text-green-400 italic">Corrected from Martial</p></div>
+                </td>
+            </tr>
+        </table>
+
+        <!-- Personal Info Section -->
+        <table>
+            <tr><td class="label-cell">JOB APPLIED FOR :</td><td><input type="text" name="Job_Applied" required></td></tr>
+            <tr><td class="label-cell">FULL NAME :</td><td><input type="text" name="Full_Name" required></td></tr>
+            <tr><td class="label-cell">FATHER'S NAME :</td><td><input type="text" name="Father_Name"></td></tr>
+            <tr><td class="label-cell">MOTHER'S NAME :</td><td><input type="text" name="Mother_Name"></td></tr>
+        </table>
+
+        <table>
+            <tr>
+                <td style="width: 50%;">PERMANENT ADDRESS :<br><textarea name="Perm_Address" rows="3"></textarea></td>
+                <td style="width: 50%;">PRESENT ADDRESS :<br><textarea name="Pres_Address" rows="3"></textarea></td>
+            </tr>
+        </table>
+
+        <table>
+            <tr>
+                <td class="label-cell">PHONE / MOBILE :</td><td><input type="text" name="Phone1"></td>
+                <td class="label-cell">PHONE / MOBILE :</td><td><input type="text" name="Phone2"></td>
+            </tr>
+            <tr>
+                <td class="label-cell">REFERENCE 1 :</td><td><input type="text" name="Ref1_Name"></td>
+                <td class="label-cell">REFERENCE 2 :</td><td><input type="text" name="Ref2_Name"></td>
+            </tr>
+            <tr>
+                <td class="label-cell">MOBILE NO. :</td><td><input type="text" name="Ref1_Mob"></td>
+                <td class="label-cell">MOBILE NO. :</td><td><input type="text" name="Ref2_Mob"></td>
+            </tr>
+        </table>
+
+        <table>
+            <tr>
+                <td style="width:15%">DATE OF BIRTH :</td><td style="width:35%"><input type="date" name="DOB"></td>
+                <td style="width:15%">PLACE OF BIRTH :</td><td style="width:35%"><input type="text" name="POB"></td>
+            </tr>
+            <tr>
+                <td>SEX :</td><td><input type="text" name="Sex"></td>
+                <td>MARITAL STATUS :</td><td><input type="text" name="Marital_Status"></td>
+            </tr>
+            <tr>
+                <td>RELIGION :</td><td><input type="text" name="Religion"></td>
+                <td>NATIONALITY :</td><td><input type="text" name="Nationality"></td>
+            </tr>
+        </table>
+
+        <table>
+            <tr><td class="label-cell">EDUCATIONAL QUALIFICATION :</td><td><input type="text" name="Edu_Qual"></td></tr>
+            <tr><td class="label-cell">TECHNICAL QUALIFICATION :</td><td><input type="text" name="Tech_Qual"></td></tr>
+            <tr><td class="label-cell">LANGUAGES KNOWN :</td><td><input type="text" name="Languages"></td></tr>
+        </table>
+
+        <!-- Passport Section -->
+        <table>
+            <tr>
+                <td style="width:20%">PASSPORT NO. :</td><td style="width:30%"><input type="text" name="Passport_No"></td>
+                <td style="width:20%">PASSPORT STATUS :</td>
+                <td style="width:30%">
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" name="Passport_Status" value="ECR"> ECR</label>
+                        <label><input type="checkbox" name="Passport_Status" value="ECNR"> ECNR</label>
                     </div>
-                    <span class="text-gray-500">></span>
-                </div>
-            </div>
+                </td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <td style="width:18%">PLACE OF ISSUE :</td><td style="width:15%"><input type="text" name="P_Issue"></td>
+                <td style="width:18%">DATE OF ISSUE :</td><td style="width:15%"><input type="date" name="D_Issue"></td>
+                <td style="width:18%">DATE OF EXPIRY :</td><td><input type="date" name="D_Expiry"></td>
+            </tr>
+        </table>
+
+        <!-- Experience Table -->
+        <div class="title-bar">WORK EXPERIENCE (STARTING WITH THE MOST RECENT EMPLOYER)</div>
+        <table>
+            <tr class="center-text" style="background-color: rgba(0,0,0,0.03);">
+                <td rowspan="2" style="width:25%">NAME OF EMPLOYER / COMPANY</td>
+                <td rowspan="2" style="width:15%">POSITION / JOB</td>
+                <td colspan="2" style="width:20%">DURATION</td>
+                <td colspan="2" style="width:20%">EXP. NO OF YEARS</td>
+                <td rowspan="2" style="width:20%">REMARKS</td>
+            </tr>
+            <tr class="center-text" style="font-size: 9px;">
+                <td>FROM</td><td>TO</td><td>OVERSEAS</td><td>INDIA</td>
+            </tr>
+            <!-- Row 1 -->
+            <tr>
+                <td><input type="text" name="Exp1_Co"></td><td><input type="text" name="Exp1_Job"></td>
+                <td><input type="text" name="Exp1_F"></td><td><input type="text" name="Exp1_T"></td>
+                <td><input type="text" name="Exp1_A"></td><td><input type="text" name="Exp1_I"></td>
+                <td><input type="text" name="Exp1_Rem"></td>
+            </tr>
+            <!-- Row 2 -->
+            <tr>
+                <td><input type="text" name="Exp2_Co"></td><td><input type="text" name="Exp2_Job"></td>
+                <td><input type="text" name="Exp2_F"></td><td><input type="text" name="Exp2_T"></td>
+                <td><input type="text" name="Exp2_A"></td><td><input type="text" name="Exp2_I"></td>
+                <td><input type="text" name="Exp2_Rem"></td>
+            </tr>
+            <!-- Row 3 -->
+            <tr>
+                <td><input type="text" name="Exp3_Co"></td><td><input type="text" name="Exp3_Job"></td>
+                <td><input type="text" name="Exp3_F"></td><td><input type="text" name="Exp3_T"></td>
+                <td><input type="text" name="Exp3_A"></td><td><input type="text" name="Exp3_I"></td>
+                <td><input type="text" name="Exp3_Rem"></td>
+            </tr>
+            <tr>
+                <td colspan="4" class="right-text">TOTAL EXPERIENCE :</td>
+                <td><input type="text" name="Total_Overseas" placeholder="OVERSEAS"></td>
+                <td><input type="text" name="Total_India" placeholder="INDIA"></td>
+                <td></td>
+            </tr>
+        </table>
+
+        <!-- Declaration Section -->
+        <div class="declaration-section">
+            <strong>DECLARATION:</strong> I hereby declare that all the information provided above is true, complete, and correct to the best of my knowledge and belief. I understand that any false statement or omission may lead to the rejection of my application or termination of employment.
         </div>
 
-        <!-- 5. SUBMISSION PAGE -->
-        <div id="airdrop" class="tab-content text-center">
-            <div class="mt-4 px-4">
-                <span class="text-6xl">🖋️</span>
-                <h2 class="text-2xl font-bold mt-6 uppercase">Final Review</h2>
-                
-                <!-- FORMATTING IMPROVEMENT: DECLARATION SECTION -->
-                <div class="glass p-4 rounded-xl text-[10px] text-gray-400 text-left mt-6 leading-relaxed border-t-2 border-yellow-600/30">
-                    <p class="font-bold text-gray-300 mb-2 underline uppercase">DECLARATION:</p>
-                    I hereby confirm that all information provided in this Biodata Form, including Father's Name, Mother's Name, and Experience details, is accurate to the best of my knowledge.
-                </div>
-                
-                <p class="text-xs text-yellow-500 mt-10 font-bold uppercase tracking-widest animate-pulse">Processing Submission...</p>
-                
-                <button class="mt-6 glass px-10 py-4 rounded-2xl border-yellow-500 text-yellow-500 font-bold w-full uppercase tracking-widest text-sm">Submit to Database</button>
-                
-                <!-- Correction: DATE: PLACE: SIGNATURE: -->
-                <p class="mt-8 text-[9px] text-gray-500 font-bold tracking-widest">
-                    DATE: _________ | PLACE: _________ | SIGNATURE: _________
-                </p>
-            </div>
+        <!-- Signature Section -->
+        <table style="margin-top: 5px; border: none;">
+            <tr style="border: none;">
+                <td style="width:30%; border:none;">DATE: <input type="text" name="Submit_Date" style="width:60%; border-bottom: 1px dotted black;"></td>
+                <td style="width:30%; border:none;">PLACE: <input type="text" name="Submit_Place" style="width:60%; border-bottom: 1px dotted black;"></td>
+                <td style="width:40%; border:none; text-align:right;">SIGNATURE: <span style="display:inline-block; width:150px; border-bottom: 1px solid black;"></span></td>
+            </tr>
+        </table>
+
+        <!-- Office Use Section -->
+        <div class="title-bar" style="font-style: italic; margin-top: 15px;">FOR OFFICE USE ONLY</div>
+        <table>
+            <tr>
+                <td style="width:20%">
+                    <div class="checkbox-group"><label><input type="checkbox" name="Sel"> SELECTED</label></div>
+                </td>
+                <td style="width:40%">SALARY OFFERED : <input type="text" name="Salary_Offered" style="width:50%"></td>
+                <td rowspan="3" style="width:40%; vertical-align: top;">CLIENT REMARKS :<br><textarea name="Client_Remarks" rows="4"></textarea></td>
+            </tr>
+            <tr>
+                <td><div class="checkbox-group"><label><input type="checkbox" name="Standby"> STAND BY</label></div></td>
+                <td>INTERVIEWED BY : <input type="text" name="Interviewer" style="width:50%"></td>
+            </tr>
+            <tr>
+                <td><div class="checkbox-group"><label><input type="checkbox" name="Rejected"> REJECTED</label></div></td>
+                <td></td>
+            </tr>
+        </table>
+
+        <div style="text-align: center; font-size: 11px; font-weight: bold; margin-top: 15px; letter-spacing: 0.5px;">
+            APPLICATIONS ONCE SUBMITTED WILL NOT BE RETURNED.
         </div>
 
-    </main>
+        <button type="submit" class="btn-submit">SUBMIT APPLICATION</button>
+    </form>
+</div>
 
-    <!-- Focus / Energy Section -->
-    <div id="energy-section" class="px-6 mb-4">
-        <div class="flex justify-between text-[10px] mb-1 uppercase tracking-tighter font-bold">
-            <span>⚡ Processing Focus: <span id="energy-val">1000</span> / 1000</span>
-            <span class="text-yellow-500">Fast Process</span>
-        </div>
-        <div class="w-full bg-gray-800 h-1.5 rounded-full overflow-hidden">
-            <div id="energy-bar" class="bg-yellow-500 h-full w-full transition-all duration-300"></div>
-        </div>
-    </div>
+<script>
+  function previewImage(event) {
+    var reader = new FileReader();
+    reader.onload = function(){
+      var output = document.getElementById('output-image');
+      var text = document.getElementById('upload-text');
+      output.src = reader.result;
+      output.style.display = 'block';
+      text.style.display = 'none';
+    };
+    reader.readAsDataURL(event.target.files[0]);
+  }
+</script>
 
-    <!-- BOTTOM NAVIGATION BAR -->
-    <nav class="glass mx-4 mb-4 rounded-3xl h-20 flex justify-around items-center px-2 shadow-2xl">
-        <div onclick="switchTab('exchange')" class="nav-item active flex flex-col items-center gap-1">
-            <span class="text-xl">📋</span><span class="text-[9px] uppercase font-bold">Biodata</span>
-        </div>
-        <div onclick="switchTab('mine')" class="nav-item flex flex-col items-center gap-1">
-            <span class="text-xl">🛠️</span><span class="text-[9px] uppercase font-bold">Improve</span>
-        </div>
-        <div onclick="switchTab('friends')" class="nav-item flex flex-col items-center gap-1">
-            <span class="text-xl">🤝</span><span class="text-[9px] uppercase font-bold">Agents</span>
-        </div>
-        <div onclick="switchTab('earn')" class="nav-item flex flex-col items-center gap-1">
-            <span class="text-xl">🔍</span><span class="text-[9px] uppercase font-bold">Verify</span>
-        </div>
-        <div onclick="switchTab('airdrop')" class="nav-item flex flex-col items-center gap-1">
-            <span class="text-xl">🖋️</span><span class="text-[9px] uppercase font-bold">Sign</span>
-        </div>
-    </nav>
-
-    <script>
-        let credits = parseInt(localStorage.getItem('link_credits')) || 0;
-        let speed = parseInt(localStorage.getItem('link_speed')) || 0;
-        let focus = 1000;
-
-        function switchTab(tabId) {
-            document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active-tab'));
-            document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
-            document.getElementById(tabId).classList.add('active-tab');
-            event.currentTarget.classList.add('active');
-            document.getElementById('energy-section').style.display = (tabId === 'exchange') ? 'block' : 'none';
-        }
-
-        function updateUI() {
-            document.getElementById('balance').innerText = credits.toLocaleString();
-            document.getElementById('p-hour').innerText = speed.toLocaleString();
-            document.getElementById('energy-val').innerText = focus;
-            document.getElementById('energy-bar').style.width = (focus / 10) + "%";
-        }
-
-        document.getElementById('exchange').addEventListener('click', (e) => {
-            if (focus > 0 && (e.target.id === 'coin-img' || e.target.parentNode.id === 'coin-img')) {
-                credits += 1;
-                focus -= 1;
-                createFloatText(e);
-                saveData();
-                updateUI();
-                if (navigator.vibrate) navigator.vibrate(5);
-            }
-        });
-
-        function createFloatText(e) {
-            const t = document.createElement('div');
-            t.innerText = "+1"; t.className = 'float-text';
-            t.style.left = (e.clientX || window.innerWidth/2) + "px"; 
-            t.style.top = (e.clientY || window.innerHeight/2) + "px";
-            document.body.appendChild(t);
-            setTimeout(() => t.remove(), 800);
-        }
-
-        function buyCard(cost, profit, name) {
-            if (credits >= cost) {
-                credits -= cost;
-                speed += profit;
-                saveData();
-                updateUI();
-                alert(name + " Applied Successfully!");
-            } else {
-                alert("Insufficient Credits to process correction.");
-            }
-        }
-
-        function saveData() {
-            localStorage.setItem('link_credits', credits);
-            localStorage.setItem('link_speed', speed);
-        }
-
-        setInterval(() => {
-            credits += Math.floor(speed / 3600); 
-            if (focus < 1000) focus += 3; 
-            updateUI();
-        }, 1000);
-
-        updateUI();
-    </script>
 </body>
 </html>
